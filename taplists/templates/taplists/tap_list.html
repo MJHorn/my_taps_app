@@ -6,16 +6,15 @@
         <div>
             <h1><a href="">BesTap Melbourne</a></h1>
         </div>
-
         <div>
             <p>The best beer on tap in Melbourne.</p>
             <h2><a href="">Top 5</a></h2>
-            <ol>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-              <li>Item 4</li>
-              <li>Item 5</li>
-            </ol></div>
+            <ol> 
+            {% for tap in taps %}
+            <li>{{ tap.beer }} - {{ tap.brewery }} - {{ tap.rating }} </li>
+            {% endfor %}
+            </ol>
+
+        </div>
     </body>
 </html>
