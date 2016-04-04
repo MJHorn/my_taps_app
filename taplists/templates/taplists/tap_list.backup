@@ -1,0 +1,53 @@
+{% load staticfiles %}
+
+<html>
+   <head>
+      <title>BesTap</title>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="{% static 'css/taplists.css' %}">
+      <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+   <style>
+    #left
+    {
+      width: 800px;
+      float: left;
+    }
+
+    #right
+    {
+      margin-left: 800px; /* Change this to whatever the width of your left column is*/
+    }
+
+    .clear
+    {
+      clear: both;
+    }
+  </style>
+  </head>
+  <body>
+        <div class="pageheader">
+            <h1><a href=""> BesTap Melbourne</a></h1>
+            <p>	The best beer on tap in Melbourne - Taplists from nowtapped.com - Ratings from untappd.com </p>
+        </div>
+          <div id="container">
+          <div id="left">
+        <div class="listhead">
+            <h2><a href="">Top 10 Taps</a></h2>
+        </div>
+        <ol class="thelist"> 
+          {% for tap in taps %}
+          <li>{{ tap.beer }} - {{ tap.brewery }} - {{ tap.rating }} </li>
+          {% endfor %}
+        </ol>
+       </div>
+
+      <h2>Select Bars</h2>
+      <h4>Pick the bars you care about:</p>
+  <div class="clear"></div>
+
+  </div>
+
+  </body>
+
+</html>
