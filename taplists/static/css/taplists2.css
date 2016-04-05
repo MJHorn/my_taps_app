@@ -5,7 +5,7 @@ h1 a {
 }
 
 .pageheader, .subtitle {
-    background-color: #080808;
+    background-color: #222222;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
     width: 100%;
@@ -19,6 +19,10 @@ h1 a {
 }
 
 p {
+    color: #222222;
+}
+
+.subt { 
     color: #ffffff;
 }
 
@@ -33,4 +37,9 @@ ol{
 
 ol li{
     font-size:20px;
+}
+
+ul
+{
+    list-style-type: none;
 }

@@ -9,17 +9,19 @@
     <ol class="thelist"> 
     {% for tap in filter %}
       <li>{{ tap.beer }} - {{ tap.brewery }} - {{ tap.rating }} </li>
+      <p>@ {{ tap.bar }}</p>
     {% endfor %}
     </ol>
   </div>
   <h2>Select Bars</h2>
-  <h4>Pick the bars you care about:</p>
-    <h1>New tap</h1> 
-    <div>
+  <h4>Pick the bars you care about:</h4>
+  <h4 class="pickbars">
     <form action="" method="get">
         {{ filter.form.as_p }}
+    <p></p>
         <input type="submit" />
     </form>
+  </h4>
     </div>
 <div class="clear"></div>
 {% endblock %}
