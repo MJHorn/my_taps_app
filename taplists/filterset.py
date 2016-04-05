@@ -1,5 +1,6 @@
 import django_filters
 from .models import Tap
+from .models import Bar
 from django import forms
 
 BARLIST=(
@@ -29,9 +30,8 @@ BARLIST=(
     ('upinsmoke', 'Up In Smoke'),
 )
 
-
 class TapFilter(django_filters.FilterSet):
-    bar = django_filters.MultipleChoiceFilter(label="", widget=forms.CheckboxSelectMultiple, choices=BARLIST,)
+    bar = django_filters.ModelMultipleChoiceFilter(label="", widget=forms.CheckboxSelectMultiple, choices=BARLIST,help_text="",)
 
     class Meta:
         model = Tap

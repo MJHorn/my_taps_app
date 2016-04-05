@@ -9,7 +9,11 @@
     <ol class="thelist"> 
     {% for tap in filter %}
       <li>{{ tap.beer }} - {{ tap.brewery }} - {{ tap.rating }} </li>
-      <p>@ {{ tap.bar }}</p>
+      <p>
+        {% for bar in tap.bar.all %}
+          {{ bar }}
+        {% endfor %}
+      </p>
     {% endfor %}
     </ol>
   </div>
@@ -24,6 +28,6 @@
       </form>
     </h4>
   </div>
-</div>
+
 <div class="clear"></div>
 {% endblock %}
