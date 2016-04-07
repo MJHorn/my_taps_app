@@ -11,7 +11,7 @@
       <div id="list2">
          <ol>
            {% for tap in filter %}
-             <li><p><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a href="http://untappd.com{{ tap.beerurl }}" >Rating: {{ tap.rating}}</a></li>
+             <li><p><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></li>
            {% endfor %}
          </ol>
       </div>

@@ -12,7 +12,6 @@ class Command(BaseCommand):
 		fields = ['brewery','beer','rating','beerurl']
 
 		for row in csv.reader(open('/Users/transfer/Documents/Coding/BesTap/Some_Taps'), delimiter='\t'):
-			print row
 			b = Bar.objects.get(bar=row[0])
 			s = Style.objects.get(style=row[5])
 			rrow=[row[1],row[2],row[3],row[4]]
