@@ -39,7 +39,7 @@ h2 a {
 }
 
 ol{
-    padding-left: 80px;
+    padding-left: 55px;
 }
 
 ol li{
@@ -50,3 +50,8 @@ ul
 {
     list-style-type: none;
 }
+
+/* LIST #2 */
+#list2 ol { font-style:italic;  font-family:Lobster;  color:#BBBBBB; padding-left: 0px }
+#list2 ol li p { padding:1px; font-style:normal; font-family:Helvetica;  font-size:16px; color:#222222; }
+#list2 ol li p em { display:block; }

@@ -6,17 +6,18 @@
     <div class="listhead">
       <h2><a href="">Top Taps</a></h2>
     </div>
-    <ol class="thelist"> 
-    {% for tap in filter %}
-      <li>{{ tap.beer }} - {{ tap.brewery }} - {{ tap.rating }} </li>
-      <p>@
-        {% for bar in tap.bar.all %}
-          {{ bar }}{% include "taplists/comma.html" %}
-        {% endfor %}
-      </p>
-    {% endfor %}
+
+    <ol> 
+      <div id="list2">
+         <ol>
+           {% for tap in filter %}
+             <li><p><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a href="http://untappd.com{{ tap.beerurl }}" >Rating: {{ tap.rating}}</a></li>
+           {% endfor %}
+         </ol>
+      </div>
     </ol>
   </div>
+
   <div id="right" class="rightside">
     <h2>Select Bars</h2>
     <h4>Pick the bars you care about:</h4>
