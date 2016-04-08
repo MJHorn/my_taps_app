@@ -14,3 +14,11 @@ class TapForm(forms.Form):
             choices=CHOICES, 
             label="...", 
             required=False)
+
+
+class StyleForm(forms.Form):
+
+    letters = forms.MultipleChoiceField(
+            choices=CHOICES,
+            label="...",
+            required=False)

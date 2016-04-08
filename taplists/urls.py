@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.tap_list, name='tap_list'),
+    url(r'^tapstyle/$', views.tap_style, name='tap_style'),
 ]
 
 
