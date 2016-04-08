@@ -18,6 +18,10 @@ h1 a {
     padding-left: 0px;
 }
 
+button {
+   height:40px;
+   width:200px;
+}
 
 .top-menua {
    position:absolute;

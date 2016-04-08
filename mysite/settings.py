@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'taplists',	
     'django_filters',
+    'favicon',
 ]
 
 MIDDLEWARE_CLASSES = [
