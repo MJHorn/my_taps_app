@@ -1,6 +1,6 @@
 from django import forms
-
 from .models import Tap
+from .models import Bar
 
 CHOICES = (
 (0, 'Two Row'),

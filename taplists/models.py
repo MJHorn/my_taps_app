@@ -4,8 +4,7 @@ from django.utils.encoding import python_2_unicode_compatible
 @python_2_unicode_compatible
 class Style(models.Model):
     style = models.CharField(max_length=200)
-    region = models.CharField(max_length=200, default="Farmville")
- 
+    
     def __str__(self):
         return self.style
 
@@ -14,12 +13,13 @@ class Style(models.Model):
 
 class Bar(models.Model):
     bar = models.CharField(max_length=200)
+    region = models.CharField(max_length=200, default='Farmville')
 
     def __str__(self):
         return self.bar
 
     class Meta:
-        ordering = ('bar',)
+        ordering = ('bar','region')
 
 class Tap(models.Model):
     bar = models.ManyToManyField(Bar)
