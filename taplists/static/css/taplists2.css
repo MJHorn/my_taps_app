@@ -19,9 +19,23 @@ h1 a {
 }
 
 button {
-   height:40px;
+   height:41px;
    width:200px;
+   background-color:#44c767;
+   -webkit-border-radius:28px;
+   border-radius:28px;
+   border:0px solid #18ab29;
+   display:inline-block;
+   text-decoration:none;
 }
+
+button:hover {
+	background-color:#F45B69;
+        color:#ffffff;
+}
+
+
+button:focus {outline:0;}
 
 .top-menua {
    position:absolute;
@@ -39,6 +53,10 @@ button {
    color: #222222;
    font-size: 20pt;
    font-family: 'Helvetica';
+}
+
+.leftside {
+    background-color: #ffffff;
 }
 
 .rightside {
@@ -72,6 +90,9 @@ ol li{
 ul
 {
     list-style-type: none;
+}
+
+a { color: #080808;
 }
 
 /* LIST #2 */
