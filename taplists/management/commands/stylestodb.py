@@ -5,10 +5,10 @@ import codecs
 
 class Command(BaseCommand):
 
-	help = "My style import command"
+    help = "My style import command"
 
-	def handle(self, *args, **options):
-		fields = ['style']
+    def handle(self, *args, **options):
+        fields = ['style']
 
-		for row in csv.reader(codecs.open('/Users/transfer/Documents/Coding/BesTap/Style_Names'), delimiter='\t'):
-			Style.objects.create(**dict(zip(fields, row)))
+        for row in csv.reader(codecs.open('/Users/transfer/Documents/Coding/BesTap/Style_Names'), delimiter='\t'):
+            Style.objects.create(**dict(zip(fields, row)))
