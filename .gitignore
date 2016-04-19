@@ -3,3 +3,6 @@ __pycache__
 myvenv
 /static
 .DS_Store
+taplists/management/commands/barstodb.py
+taplists/management/commands/stylestodb.py
+taplists/management/commands/tapstodb.py
