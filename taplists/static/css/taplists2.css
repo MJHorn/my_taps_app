@@ -50,6 +50,25 @@ button:hover {
 
 button:focus {outline:0;}
 
+input {
+   font-family: 'Lobster';
+   font-size:20pt;
+   -webkit-border-radius: 10;
+   -moz-border-radius: 10;
+   border-radius: 10px;
+   border: none;
+}
+
+input:hover {
+    background-color:#F45B69;
+    color:#ffffff;
+}
+
+input:focus {outline:0;}
+
+
+
+
 .top-menua {
    position:absolute;
    top:36px;
@@ -83,22 +102,6 @@ button:focus {outline:0;}
   overflow: hidden;
 }
 
-.columna {
-  float: left;
-  width: 60%;
-  padding: 20px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  padding: 20px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -114,6 +117,7 @@ p {
 h2 {
     color: #080808;
     padding-left: 15px;
+    font-family:Lobster;
 }
 
 h2 a {
@@ -136,10 +140,11 @@ ul
 
 a { color: #080808;
 }
-.pickbars {padding-left:40px}
 
+.pickbars {padding-left:40px; font-family:Helvetica }
 
 /* LIST #2 */
 #list2 ol { font-style:italic;  font-family:Lobster;  color:#BBBBBB; padding-left: 0px }
 #list2 ol li p { padding:1px; font-style:normal; font-family:Helvetica;  font-size:16px; color:#222222; }
 #list2 ol li p em { display:block; }
+
