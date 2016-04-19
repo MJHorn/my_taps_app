@@ -4,7 +4,7 @@ h1 a {
 }
 
 .pageheader, .subtitle {
-    background-color: #222222;
+    background-color: #363681;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
     width: 100%;
@@ -18,7 +18,7 @@ h1 a {
 }
 
 .pageheader h1 a:hover {
-    color: #F45B69;
+    color: #F45B69
 }
 
 .headlink {
@@ -68,15 +68,39 @@ button:focus {outline:0;}
    font-family: 'Helvetica';
 }
 
-.leftside {
-    background-color: #ffffff;
+.twocols {
+  background: linear-gradient(
+    to right,
+    
+    lightyellow,
+    lightyellow 65%,
+   
+    lightpink 65%,
+    lightpink
+  );
+  
+  /* clearfix */
+  overflow: hidden;
 }
 
-.rightside {
-    background-color: #BBBBBB;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
-    width: 100%;
+.columna {
+  float: left;
+  width: 60%;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 p {
@@ -112,6 +136,8 @@ ul
 
 a { color: #080808;
 }
+.pickbars {padding-left:40px}
+
 
 /* LIST #2 */
 #list2 ol { font-style:italic;  font-family:Lobster;  color:#BBBBBB; padding-left: 0px }
