@@ -6,6 +6,8 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     url(r'^$', views.tap_list, name='tap_list'),
     url(r'^tapstyle/$', views.tap_style, name='tap_style'),
+    url(r'^about/$', views.about, name='about'),
+    
 ]
 
 

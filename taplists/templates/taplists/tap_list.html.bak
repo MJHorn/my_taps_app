@@ -4,13 +4,14 @@
 <div id="container">
   <div id="left" class="leftside">
     <div class="listhead">
-      <h2>Top Taps</h2>
+      <h2><a href="">Top Taps</a></h2>
     </div>
+
     <ol> 
       <div id="list2">
          <ol>
            {% for tap in filter %}
-             <li><p><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar.bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a class='bodylink' href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></li>
+             <li><p><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar.bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></li>
            {% endfor %}
          </ol>
       </div>
@@ -18,7 +19,7 @@
   </div>
 
   <div id="right" class="rightside">
-    <h2>Filter Taps:</h2>
+    <h2>Where to?</h2>
     <h4 class="pickbars">
       <form action="" method="get">
           {{ filter.form.as_p }}

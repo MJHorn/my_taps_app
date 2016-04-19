@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = "My style import command"
 
     def handle(self, *args, **options):
-        fields = ['style']
+        fields = ['style','broadstyle']
 
-        for row in csv.reader(codecs.open('/Users/transfer/Documents/Coding/BesTap/Style_Names'), delimiter='\t'):
+        for row in csv.reader(codecs.open('/Users/transfer/Documents/Coding/BesTap/Style_Guide'), delimiter=','):
             Style.objects.create(**dict(zip(fields, row)))

@@ -4,6 +4,7 @@ from django.utils.encoding import python_2_unicode_compatible
 @python_2_unicode_compatible
 class Style(models.Model):
     style = models.CharField(max_length=200)
+    broadstyle = models.CharField(max_length=200, default='Shiraz')
     
     def __str__(self):
         return self.style
