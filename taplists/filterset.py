@@ -3,7 +3,6 @@ from .models import Tap
 from .models import Bar
 from .models import Style
 from django import forms
-from .filters import BarRatingFilter
 
 CHOICES = (
     ('CBD', 'CBD'),
