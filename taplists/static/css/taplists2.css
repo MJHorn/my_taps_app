@@ -67,8 +67,6 @@ input:hover {
 input:focus {outline:0;}
 
 
-
-
 .top-menua {
    position:absolute;
    top:36px;
@@ -91,8 +89,8 @@ input:focus {outline:0;}
   background: linear-gradient(
     to right,
     
-    lightyellow,
-    lightyellow 65%,
+    white,
+    white 65%,
    
     lightpink 65%,
     lightpink
@@ -144,7 +142,12 @@ a { color: #080808;
 .pickbars {padding-left:40px; font-family:Helvetica }
 
 /* LIST #2 */
-#list2 ol { font-style:italic;  font-family:Lobster;  color:#BBBBBB; padding-left: 0px }
+#list2 ol { font-style:italic;  font-family:Lobster;  color:#BBBBBB; padding-left: 20px }
 #list2 ol li p { padding:1px; font-style:normal; font-family:Helvetica;  font-size:16px; color:#222222; }
 #list2 ol li p em { display:block; }
+
+img {
+    float: left;
+    margin: 0 20px 20px 0;
+}
 

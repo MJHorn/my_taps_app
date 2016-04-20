@@ -29,6 +29,7 @@ class Tap(models.Model):
     rating = models.DecimalField(max_digits=5, decimal_places=3)
     beerurl = models.CharField(max_length=200, default='https://untappd.com/b/the-alchemist-heady-topper/4691')
     style = models.ManyToManyField(Style)    
+    image = models.CharField(max_length=200,default='http://vignette3.wikia.nocookie.net/pokemon/images/1/16/025Pikachu_OS_anime_10.png/revision/20150102074354')
 
     def __str__(self):
         return self.beer
