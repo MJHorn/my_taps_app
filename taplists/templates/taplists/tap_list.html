@@ -11,7 +11,7 @@
          <ol>
            {% for tap in filter %}
              <li>
-<p><img src="{{ tap.image }}"  alt="Lamp" width="80" height="80"><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar.bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a class='bodylink' href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></p></li>
+<p><img src="{{ tap.image }}"  alt="" width="80" height="80"><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar.bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a class='bodylink' href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></p></li>
            {% endfor %}
          </ol>
       </div>

@@ -14,14 +14,13 @@ CHOICES = (
 )
 
 STYLES = (
-    ('Pale/Golden/Blonde','Pale/Golden/Blonde'),
-    ('IPA','IPA'),
-    ('Amber','Amber'),
+    ('Pale / Golden','Pale / Golden'),
+    ('IPA / Amber','IPA / Amber'),
     ('Lager','Lager'),
-    ('Wheat/Saison/Farmhouse','Wheat/Saison/Farmhouse'),
+    ('Saison / Wheat','Saison / Wheat'),
     ('Sour','Sour'),
-    ('Brown/Porter/Stout','Brown/Porter/Stout'),
-    ('Strong Ale','Strong Ale / Barleywine'),
+    ('Brown / Porter / Stout','Brown / Porter / Stout'),
+    ('Strong Ale / Barleywine','Strong Ale / Barleywine'),
     ('Cider','Cider'),
     ('Other','Other'),
 )
