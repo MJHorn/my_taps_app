@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'taplists',	
     'django_filters',
+    'analytical',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -122,3 +123,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# tracking
+
+CLICKY_SITE_ID = '100946812'
+

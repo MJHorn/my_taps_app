@@ -48,9 +48,9 @@ button:hover {
     color:#ffffff;
 }
 
-button:focus {outline:0;}
+input:focus {outline:0;}
 
-input {
+.subbutton input {
    font-family: 'Lobster';
    font-size:20pt;
    -webkit-border-radius: 10;
@@ -59,13 +59,12 @@ input {
    border: none;
 }
 
-input:hover {
+.subbutton input:hover {
     background-color:#F45B69;
     color:#ffffff;
 }
 
-input:focus {outline:0;}
-
+.subbutton input:focus {outline:0;}
 
 .top-menua {
    position:absolute;
