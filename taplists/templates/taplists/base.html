@@ -1,9 +1,8 @@
-{% load analytical %}
+{% load clicky %}
 {% load staticfiles %}
 
 <html>
 <head>
-    {% analytical_head_top %}
     <title>BesTap</title>
     <link href=
     "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel=
@@ -15,10 +14,8 @@
     "http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"
     rel="stylesheet" type="text/css">
     <link href="{% static 'css/taplists2.css' %}" rel="stylesheet">
-    {% analytical_head_bottom %}
 </head>
 <body>
-    {% analytical_body_top %}
     <div class="content">
         <div class="pageheader">
             <h1><a href="/">BesTap Melbourne</a></h1>
@@ -29,6 +26,6 @@
            {% block content %} {% endblock %}
         </div>
     </div>
-    {% analytical_body_bottom %}
+    {% clicky %}
 </body>
 </html>
