@@ -26,8 +26,8 @@ STYLES = (
 )
 
 class TapFilter(django_filters.FilterSet):
-    bar__region = django_filters.MultipleChoiceFilter(choices=CHOICES, label="Regions:", widget=forms.CheckboxSelectMultiple,help_text="")
-    style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Styles:", widget=forms.CheckboxSelectMultiple,help_text="")
+    bar__region = django_filters.MultipleChoiceFilter(choices=CHOICES, label="Regions:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'myfieldclass'}),help_text="")
+    style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Styles:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'myfieldclass'}),help_text="")
 
 class StyleFilter(django_filters.FilterSet):
     style = django_filters.ModelMultipleChoiceFilter(queryset=Style.objects.all(), label="", widget=forms.CheckboxSelectMultiple,help_text="")
