@@ -11,6 +11,7 @@ CHOICES = (
     ('South', 'South'),
     ('East', 'East'),
     ('West', 'West'),
+    ('Regional VIC', 'Regional VIC'),
 )
 
 STYLES = (
