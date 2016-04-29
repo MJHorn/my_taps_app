@@ -1,4 +1,5 @@
 {% extends 'taplists/base.html' %}
+{% load el_pagination_tags %}
 
 {% block content %}
 <div id="container" class="twocols">
@@ -9,15 +10,21 @@
     <ol> 
       <div id="list2">
          <ol>
-           {% for tap in filter %}
-             <li>
-<p><img src="{{ tap.image }}"  alt="" width="80" height="80"><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar.bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a class='bodylink' href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></p></li>
-           {% endfor %}
-         </ol>
-      </div>
-    </ol>
-  </div>
+             <div class="endless_page_template">
+                {% include page_template %}
 
+                {% block js %}
+                {{ block.super }}
+                <script src="http://code.jquery.com/jquery-latest.js"></script>
+                <script src='static/el-pagination.js'></script>
+                <script>$.endlessPaginate({paginateOnScroll: true});</script>
+                {% endblock %}
+            </div>
+
+         </ol>
+  </div>
+  </ol>
+  </div>
   <div id="right" class="columnb">
     <h2>Filter Taps</h2>
     <h4 class="pickbars">

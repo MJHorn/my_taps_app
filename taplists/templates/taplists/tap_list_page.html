@@ -1,0 +1,9 @@
+{% load el_pagination_tags %}
+
+{% lazy_paginate 10,10 filter %}
+{% for tap in filter %}
+  <li>
+      <p><img src="{{ tap.image }}" onerror="this.src='https://untappd.akamaized.net/site/beer_logos/beer-Trappist-Westvleteren-12.jpg';" alt="" width="80" height="80"><b>{{ tap.beer }}</b><em>{{ tap.brewery }}</em>@{% for bar in tap.bar.all %}{{ bar.bar }}{% include "taplists/comma.html" %}{% endfor %}<br><a class='bodylink' href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></p>
+  </li>
+{% endfor %}
+{% show_more %}
