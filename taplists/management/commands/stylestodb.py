@@ -10,5 +10,5 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         fields = ['style','broadstyle']
 
-        for row in csv.reader(codecs.open('/Users/transfer/Documents/Coding/BesTap/Style_Guide'), delimiter=','):
+        for row in csv.reader(codecs.open('/home/BesTap/rating_builder/bestap_getter/Style_Guide'), delimiter=','):
             Style.objects.create(**dict(zip(fields, row)))
