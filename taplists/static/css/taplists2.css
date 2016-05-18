@@ -10,6 +10,20 @@ h1 a {
     width: 100%;
 }
 
+.pageheader_m, .subtitle {
+    background-color: #363681;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+    width: 100%;
+}
+
+.filters_m, .subtitle {
+    background-color: lightpink;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+    width: 100%;
+}
+
 .pageheader h1, .pageheader h1 a, .pageheader h1 a:visited, .pageheader h1 a:active {
     color: #ffffff;
     font-size: 36pt;
@@ -17,9 +31,22 @@ h1 a {
     padding-left: 0px;
 }
 
+.pageheader_m h1, .pageheader_m h1 a, .pageheader_m h1 a:visited, .pageheader_m h1 a:active {
+    color: #ffffff;
+    font-size: 65pt;
+    text-decoration: none;
+    padding-left: 0px;
+}
+
+
 .pageheader h1 a:hover {
     color: #F45B69
 }
+
+.pageheader_m h1 a:hover {
+    color: #F45B69
+}
+
 
 .headlink {
     color: #ffffff;
@@ -65,6 +92,23 @@ input:focus {outline:0;}
 }
 
 .subbutton input:focus {outline:0;}
+
+
+.subbutton_m input {
+   font-family: 'Lobster';
+   font-size:50pt;
+   -webkit-border-radius: 10;
+   -moz-border-radius: 10;
+   border-radius: 10px;
+   border: none;
+}
+
+.subbutton_m input:hover {
+    background-color:#F45B69;
+    color:#ffffff;
+}
+
+.subbutton_m input:focus {outline:0;}
 
 .top-menua {
    position:absolute;
@@ -123,11 +167,20 @@ a { color: #080808;
 
 .pickbars {padding-left:40px; font-family:Helvetica }
 
+.pickbars_m {font-size: 40pt; padding-left:40px; font-family:Helvetica }
+
 /* LIST #2 */
-#list2 ol { font-style:italic;  font-family:Lobster;  color:#BBBBBB; font-size:40px; }
+#list2 ol { font-style:italic;  font-family:Lobster;  color:#BBBBBB; font-size:40px; padding-left: 40px; }
 #list2 ol li {padding-left: 100px; padding-bottom: 5px; padding-top: 5px; vertical-align:middle; }
 #list2 ol li p {display: inline-block; vertical-align: top; font-style:normal; font-family:Helvetica;  font-size:16px; color:#222222; }
 #list2 ol li p em { display:block; }
+
+/* LIST #2 */
+#listm ol { font-style:italic;  font-family:Lobster;  color:#BBBBBB; font-size:80px; padding-left: 80px; }
+#listm ol li {padding-left: 150px; padding-bottom: 5px; padding-top: 5px; vertical-align:middle; }
+#listm ol li p {display: inline-block; width: 600px; vertical-align: top; font-style:normal; font-family:Helvetica;  font-size:30px; color:#222222; }
+#listm ol li p em { display:block; }
+
 
 img {
     float: left;
@@ -153,3 +206,35 @@ img {
 * {
   box-sizing: border-box;
 }
+h2 .listhead_m {
+    font-size:60px;
+}
+
+#overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     z-index: 1000;
+     font-size: 30pt;
+}
+
+#overlay div {
+     width:800px;
+     height:1600px;
+     margin: 100px auto;
+     background-color: #fff;
+     border:1px solid #000;
+     padding:15px;
+}
+
+#overlay .subbutton_m {
+    width: 0px;
+    height: 0px;
+    background-color: none;
+    border: none;
+    background-color: none
+}
+
