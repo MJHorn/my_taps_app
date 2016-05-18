@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'taplists',	
     'django_filters',
     'el_pagination',
+    'django_mobile',
     ]
 
 MIDDLEWARE_CLASSES = [
@@ -51,6 +52,9 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_cprofile_middleware.middleware.ProfilerMiddleware',
+    'django_mobile.middleware.MobileDetectionMiddleware',
+    'django_mobile.middleware.SetFlavourMiddleware',
     ]
 
 ROOT_URLCONF = 'mysite.urls'
