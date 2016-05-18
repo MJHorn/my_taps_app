@@ -30,6 +30,10 @@ class TapFilter(django_filters.FilterSet):
     bar__region = django_filters.MultipleChoiceFilter(choices=CHOICES, label="Regions:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'myfieldclass','onchange' : 'this.form.submit()'}),help_text="")
     style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Styles:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'myfieldclass','onchange' : 'this.form.submit()'}),help_text="")
 
+class MTapFilter(django_filters.FilterSet):
+    bar__region = django_filters.MultipleChoiceFilter(choices=CHOICES, label="Regions:", widget=forms.SelectMultiple(attrs={'class' : 'barclass','onchange' : 'this.form.submit()'}),help_text="")
+    style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Styles:", widget=forms.SelectMultiple(attrs={'class' : 'styleclass','onchange' : 'this.form.submit()'}),help_text="")
+
 class StyleFilter(django_filters.FilterSet):
     style = django_filters.ModelMultipleChoiceFilter(queryset=Style.objects.all(), label="", widget=forms.CheckboxSelectMultiple,help_text="")
     class Meta:
