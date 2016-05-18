@@ -1,0 +1,39 @@
+{% extends 'taplists/base_m.html' %}
+{% load el_pagination_tags %}
+
+
+{% block content %}
+<div class="filters_m">
+  <h1><a href='#' onclick='overlay()'>Filter Bars</a></h1>
+    <div>
+      <h4 class="pickbars_m">
+        <form action="" method="get">
+          {{ filter.form.as_p }}
+      </form>
+    </h4>
+  </div>
+</div>
+</div>
+
+    <div class="listhead_m">
+      <h2>Top Taps</h2>
+    </div>
+    <ol>
+      <div id="listm">
+         <ol>
+<div class="endless_page_template">
+    {% include page_template %}
+
+    {% block js %}
+    {{ block.super }}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src='static/el-pagination.js'></script>
+    <script>$.endlessPaginate({paginateOnScroll: true});</script>
+    {% endblock %}
+
+         </ol>
+      </div>
+    </ol>
+  </div>
+<div class="clear"></div>
+{% endblock %}
