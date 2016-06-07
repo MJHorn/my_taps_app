@@ -26,11 +26,19 @@ STYLES = (
     ('Other','Other'),
 )
 
+class TapFilterMin(django_filters.FilterSet):
+    style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Styles:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'myfieldclass'}),help_text="")
+    class Meta:
+        order_by = [('-rating','Rating'),('-abv','ABV'),('-ibu','IBU')]
+
 class TapFilter(django_filters.FilterSet):
     bar__region = django_filters.MultipleChoiceFilter(choices=CHOICES, label="Regions:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'myfieldclass'}),help_text="")
     style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Styles:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'myfieldclass'}),help_text="")
     class Meta:
         order_by = [('-rating','Rating'),('-abv','ABV'),('-ibu','IBU')]
+
+class MTapFilterMin(django_filters.FilterSet):
+    style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Filter Styles:", widget=forms.SelectMultiple(attrs={'class' : 'styleclass','onchange' : 'this.form.submit()'}),help_text="")
 
 class MTapFilter(django_filters.FilterSet):
     bar__region = django_filters.MultipleChoiceFilter(choices=CHOICES, label="Filter Regions:", widget=forms.SelectMultiple(attrs={'class' : 'barclass','onchange' : 'this.form.submit()'}),help_text="")

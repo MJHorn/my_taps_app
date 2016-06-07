@@ -15,6 +15,7 @@ class Style(models.Model):
 class Bar(models.Model):
     bar = models.CharField(max_length=200)
     region = models.CharField(max_length=200, default='Farmville')
+    state = models.CharField(max_length=200,default='NY')
 
     def __str__(self):
         return self.bar
@@ -32,6 +33,7 @@ class Tap(models.Model):
     image = models.CharField(max_length=200,default='http://vignette3.wikia.nocookie.net/pokemon/images/1/16/025Pikachu_OS_anime_10.png/revision/20150102074354')
     abv = models.DecimalField(max_digits=5, decimal_places=1,default=0)
     ibu = models.DecimalField(max_digits=5, decimal_places=1,default=0)
+    state = models.CharField(max_length=200,default='NY')
 
     def __str__(self):
         return self.beer
