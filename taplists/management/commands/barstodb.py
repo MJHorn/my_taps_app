@@ -9,5 +9,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         fields = ['bar','region','state']
 
-        for row in csv.reader(open('/home/BesTap/rating_builder/bestap_getter/Bar_Names')):
-            Bar.objects.create(**dict(zip(fields, row)))
+        for row in csv.reader(open('/home/BesTap/rating_builder/bestap_getter/Bars_Names_Regions')):
+            info = row[1:4]
+            Bar.objects.update_or_create(bar=row[1], defaults=dict(zip(fields, info)))

@@ -21,24 +21,22 @@
       ga('send', 'pageview');
     
     </script>
-    <script>
-function overlay() {
-        el = document.getElementById("overlay");
-        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
-}
-    </script>
-
-    
-    
-    </head>
-<body>
+</head>
+<body style="background-color: white">
     <div class="content">
-        <div class="pageheader_m">
-            <h1><a href="/">BesTap </a> - <a href="/{{ state }}">{{ placename }}</a></h1>
-            <a href="http://twitter.com/bestapmelb/" target="_blank" class="top-menua"><div class="twitbutt"><input type="image" src="/static/Twitter_logo_blue.png" / width="60" height="49"></div></a>
+        <div class="pageheader_m2">
+            <h1><a href="/">BesTap Beer</a></h1>
+            <a href="http://twitter.com/bestapmelb/" target="_blank" class="top-menua"><div class="twitbutt"><input type="image" src="https://g.twimg.com/Twitter_logo_blue.png" / width="60" height="49"></div></a>
         </div>
-        <div class="mainstuff">
-           {% block content %} {% endblock %}
+        <div class="states_m">
+        <a href="/VIC"><button class="statebutt">VIC</button>
+        <a href="/NSW"><button class="statebutt">NSW</button>
+        <a href="/QLD"><button class="statebutt">QLD</button>
+        <a href="/WA"><button class="statebutt">WA</button>
+        <a href="/SA"><button class="statebutt">SA</button>
+        <a href="/TAS"><button class="statebutt">TAS</button>
+        <a href="/ACT"><button class="statebutt">ACT</button>
+        <a href="/All"><button class="statebutt">Australia-wide</button>
         </div>
     </div>
 </body>

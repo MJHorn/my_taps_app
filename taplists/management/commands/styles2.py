@@ -13,4 +13,4 @@ class Command(BaseCommand):
         Style.objects.all().delete()
 
         for row in csv.reader(codecs.open('/home/BesTap/rating_builder/bestap_getter/Style_Guide'), delimiter=','):
-            Style.objects.create(**dict(zip(fields, row)))
+            Style.objects.get_or_create(**dict(zip(fields, row)))

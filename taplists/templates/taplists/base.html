@@ -2,12 +2,14 @@
 
 <html>
 <head>
-    <title>BesTap</title>
+    <title>BesTap Beer</title>
     <link href=
     "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel=
     "stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link href="{% static 'css/taplists2.css' %}" rel="stylesheet">
+    <meta property="og:image" content="http://www.bestap.beer/static/icon.jpg" />
+    <meta property="og:description" content="The best rated beer on tap in Victoria, New South Wales, and Queensland." />
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,9 +24,9 @@
 <body>
     <div class="content">
         <div class="pageheader">
-            <h1><a href="/{{ state }}">BesTap {{ placename }}</a></h1>
+            <div><h1><a href="/">BesTap</a> - <a href="/{{ state }}">{{ placename }}</a></h1></div>
             <p class="subt">The best beer on tap in {{ placename }} - Taplists from <a class="headlink" href="http://nowtapped.com/" target="_blank">nowtapped.com</a> - Ratings from <a class="headlink" href="http://untappd.com/" target="_blank">untappd.com</a></p>
-            <a href="http://twitter.com/bestapmelb/" target="_blank" class="top-menua"><div class="twitbutt"><input type="image" src="https://g.twimg.com/Twitter_logo_blue.png" / width="60" height="49"></div></a>
+            <a href="http://twitter.com/bestapmelb/" target="_blank" class="top-menua"><div class="twitbutt"><input type="image" src="/static/Twitter_logo_blue.png" / width="60" height="49"></div></a>
         </div>
         <div class="mainstuff">
            {% block content %} {% endblock %}

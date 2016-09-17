@@ -6,7 +6,7 @@
   <p><img src="{{ tap.image }}" onerror="this.src='https://untappd.akamaized.net/site/beer_logos/beer-Trappist-Westvleteren-12.jpg';" alt="" width="80" height="80">
   <b>{{ tap.beer }}</b>
   <em>{{ tap.brewery }}</em>
-  @{% for bar in tap.selected_states %}{% if not regions %}{{ bar.bar }}{% else %}{% if bar.region not in regions %}{{ bar.bar }}{% else %}<b>{{ bar.bar }}</b>{% endif %}{% endif %}{% include "taplists/comma.html" %}{% endfor %}<br><a class='bodylink' href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></p>
+  @{% for bar in tap.bar.all %}{% if not regions %}{{ bar.bar }}{% else %}{% if bar.region not in regions %}{{ bar.bar }}{% else %}<b>{{ bar.bar }}</b>{% endif %}{% endif %}{% include "taplists/comma.html" %}{% endfor %}<br><a class='bodylink' href="http://untappd.com{{ tap.beerurl }}" target="_blank">Rating: {{ tap.rating}}</a></p>
   </li>
 {% endfor %}
 {% show_more %}

@@ -4,6 +4,15 @@ from .models import Bar
 from .models import Style
 from django import forms
 
+M_CHOICES = (
+    ('CBD', 'CBD'),
+    ('Inner North', 'Inner North'),
+    ('North', 'North'),
+    ('South', 'South'),
+    ('East', 'East'),
+    ('West', 'West'),
+    ('Regional VIC', 'Regional VIC'),
+)
 CHOICES = (
     ('CBD', 'CBD'),
     ('Inner North', 'Inner North'),
@@ -41,11 +50,12 @@ class MTapFilterMin(django_filters.FilterSet):
     style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Filter Styles:", widget=forms.SelectMultiple(attrs={'class' : 'styleclass','onchange' : 'this.form.submit()'}),help_text="")
 
 class MTapFilter(django_filters.FilterSet):
-    bar__region = django_filters.MultipleChoiceFilter(choices=CHOICES, label="Filter Regions:", widget=forms.SelectMultiple(attrs={'class' : 'barclass','onchange' : 'this.form.submit()'}),help_text="")
+    bar__region = django_filters.MultipleChoiceFilter(choices=M_CHOICES, label="Filter Regions:",  widget=forms.SelectMultiple(attrs={'class' : 'barclass','onchange' : 'this.form.submit()'}),help_text="")
     style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Filter Styles:", widget=forms.SelectMultiple(attrs={'class' : 'styleclass','onchange' : 'this.form.submit()'}),help_text="")
 
-class StyleFilter(django_filters.FilterSet):
-    style = django_filters.ModelMultipleChoiceFilter(queryset=Style.objects.all(), label="", widget=forms.CheckboxSelectMultiple,help_text="")
-    class Meta:
-        model = Tap
-        fields = ['style']
+class IOSTapFilter(django_filters.FilterSet):
+    bar__region = django_filters.MultipleChoiceFilter(choices=M_CHOICES, label="Regions:",  widget=forms.CheckboxSelectMultiple(attrs={'class' : 'barclass'}),help_text="")
+    style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Styles:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'styleclass'}),help_text="")
+
+class IOSTapFilterMin(django_filters.FilterSet):
+    style__broadstyle = django_filters.MultipleChoiceFilter(choices=STYLES, label="Styles:", widget=forms.CheckboxSelectMultiple(attrs={'class' : 'styleclass'}),help_text="")

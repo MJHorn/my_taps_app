@@ -7,13 +7,12 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('taplists', '0012_tap_image'),
+        ('taplists', '0001_initial'),
     ]
 
     operations = [
-        migrations.AddField(
+        migrations.RemoveField(
             model_name='tap',
-            name='abv',
-            field=models.DecimalField(default=0, max_digits=5, decimal_places=1),
+            name='state',
         ),
     ]

@@ -3,19 +3,23 @@ import csv
 from taplists.models import Bar
 from taplists.models import Tap
 from taplists.models import Style
+from django.core.exceptions import ObjectDoesNotExist
 
 class Command(BaseCommand):
 
     help = "My tap import command"
 
     def handle(self, *args, **options):
-        fields = ['brewery','beer','rating','beerurl','image','abv','ibu','state']
-
+        fields = ['brewery','beer','rating','beerurl','image','abv','ibu']
+        Tap.objects.all().delete()
         for row in csv.reader(open('/home/BesTap/rating_builder/bestap_getter/Some_Taps'), delimiter='\t'):
-            b = Bar.objects.get(bar=row[0])
             print row[6]
-            s = Style.objects.get(style=row[7])
-            rrow=[row[3],row[4],row[5],row[6],row[8],row[9],row[10],row[2]]
-            t = Tap.objects.update_or_create(brewery=row[3], beer=row[4], state=row[2], defaults=dict(zip(fields, rrow)))
+            try:
+              s = Style.objects.get(style=row[7])
+            except ObjectDoesNotExist:
+                print '%s not in database' % row[7]
+            rrow=[row[3],row[4],row[5],row[6],row[8],row[9],row[10]]
+            t = Tap.objects.update_or_create(brewery=row[3], beer=row[4], defaults=dict(zip(fields, rrow)))
+            b = Bar.objects.get(bar=row[0])
             t[0].bar.add(b)
             t[0].style.add(s)

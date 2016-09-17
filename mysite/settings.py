@@ -77,6 +77,8 @@ TEMPLATES = [
     },
 ]
 
+FLAVOURS = ('full', 'mobile', 'ios')
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 

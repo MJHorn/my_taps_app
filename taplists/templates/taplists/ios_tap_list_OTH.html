@@ -1,0 +1,40 @@
+{% extends 'taplists/base_m.html' %}
+{% load el_pagination_tags %}
+
+
+{% block content %}
+<div class="filters_ios">
+    <div class="poplink"><a href='#' onclick='overlay()'>Filter Styles</a></div>
+</div>
+
+<ol>
+    <div id="listm">
+    <ol>
+    <div class="endless_page_template">
+        {% include page_template %}
+
+        {% block js %}
+        {{ block.super }}
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src='/static/el-pagination.js'></script>
+        <script>$.endlessPaginate({paginateOnScroll: true});</script>
+        {% endblock %}
+
+    </ol>
+    </div>
+</ol>
+
+<div class="clear"></div>
+
+<div id="overlay">
+    <div class="filters_m">
+        <a class='closebox' href='#' onclick='overlay()'>x</a>
+        <h4 class="pickbars_ios">
+            <form action="" method="get">
+                {{ filter.form.as_p }}
+                <div class="subbutton_m"><a href='#' onclick='overlay()'><input type="submit" /></a></div>
+            </form>
+        </h4>
+    </div>
+</div>
+{% endblock %}
